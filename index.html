@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fawnly — Personalized Study Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== SIDEBAR NAV ===================== -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <!-- Deer mascot SVG (mini) -->
+      <svg class="brand-deer" viewBox="0 0 48 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <ellipse cx="24" cy="38" rx="11" ry="13" fill="#C4956A"/>
+        <ellipse cx="24" cy="38" rx="7" ry="9" fill="#E8C99A"/>
+        <!-- ears -->
+        <ellipse cx="14" cy="26" rx="4" ry="6" fill="#C4956A" transform="rotate(-15 14 26)"/>
+        <ellipse cx="34" cy="26" rx="4" ry="6" fill="#C4956A" transform="rotate(15 34 26)"/>
+        <ellipse cx="14.5" cy="26.5" rx="2.2" ry="3.6" fill="#E8A0A0" transform="rotate(-15 14 26)"/>
+        <ellipse cx="33.5" cy="26.5" rx="2.2" ry="3.6" fill="#E8A0A0" transform="rotate(15 34 26)"/>
+        <!-- head -->
+        <ellipse cx="24" cy="24" rx="10" ry="10" fill="#C4956A"/>
+        <ellipse cx="24" cy="24" rx="6.5" ry="7" fill="#E8C99A"/>
+        <!-- eyes -->
+        <ellipse cx="20.5" cy="22" rx="1.5" ry="1.6" fill="#5C3D2E"/>
+        <ellipse cx="27.5" cy="22" rx="1.5" ry="1.6" fill="#5C3D2E"/>
+        <circle cx="20.9" cy="21.5" r="0.5" fill="white"/>
+        <circle cx="27.9" cy="21.5" r="0.5" fill="white"/>
+        <!-- nose -->
+        <ellipse cx="24" cy="26" rx="2" ry="1.3" fill="#B98587"/>
+        <!-- antlers -->
+        <line x1="17" y1="17" x2="11" y2="8" stroke="#987665" stroke-width="2" stroke-linecap="round"/>
+        <line x1="11" y1="8" x2="8"  y2="4"  stroke="#987665" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="11" y1="8" x2="14" y2="4"  stroke="#987665" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="31" y1="17" x2="37" y2="8" stroke="#987665" stroke-width="2" stroke-linecap="round"/>
+        <line x1="37" y1="8" x2="40" y2="4"  stroke="#987665" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="37" y1="8" x2="34" y2="4"  stroke="#987665" stroke-width="1.6" stroke-linecap="round"/>
+        <!-- legs -->
+        <rect x="18" y="49" width="4" height="7" rx="2" fill="#C4956A"/>
+        <rect x="26" y="49" width="4" height="7" rx="2" fill="#C4956A"/>
+      </svg>
+      <span class="brand-name">Fawnly</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#dashboard"   class="nav-link active"><span class="nav-icon">🏡</span> Dashboard</a></li>
+      <li><a href="#materials"   class="nav-link"><span class="nav-icon">📚</span> Materials</a></li>
+      <li><a href="#workflow"    class="nav-link"><span class="nav-icon">🌿</span> AI Workflow</a></li>
+      <li><a href="#quiz"        class="nav-link"><span class="nav-icon">🍄</span> Quiz &amp; Practice</a></li>
+      <li><a href="#planner"     class="nav-link"><span class="nav-icon">🗓️</span> Study Planner</a></li>
+      <li><a href="#progress"    class="nav-link"><span class="nav-icon">🌱</span> Progress</a></li>
+      <li><a href="#records"     class="nav-link"><span class="nav-icon">🌾</span> Records</a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="user-avatar">EA</div>
+        <div class="user-info">
+          <span class="user-name">Elara Ashwood</span>
+          <span class="user-role">Psychology • Year 3</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="main-content">
+
+    <!-- ============ 1. DASHBOARD ============ -->
+    <section id="dashboard" class="section">
+      <div class="section-header">
+        <h1 class="section-title">Dashboard</h1>
+        <span class="section-date">Wednesday, 18 November 2026</span>
+      </div>
+
+      <!-- Welcome banner with big mascot -->
+      <div class="welcome-banner">
+        <div class="welcome-text">
+          <p class="welcome-greeting">Good afternoon, Elara 🌿</p>
+          <h2 class="welcome-headline">Ready to grow today?</h2>
+          <p class="welcome-sub">You have <strong>3 upcoming deadlines</strong> this week and <strong>2 quizzes</strong> to complete. Let's make it count!</p>
+          <a href="#planner" class="btn btn-primary">View Today's Plan</a>
+        </div>
+        <!-- Large mascot SVG -->
+        <svg class="welcome-deer" viewBox="0 0 110 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Fawnly deer mascot">
+          <!-- body -->
+          <ellipse cx="55" cy="90" rx="26" ry="30" fill="#C4956A"/>
+          <ellipse cx="55" cy="90" rx="17" ry="22" fill="#E8C99A"/>
+          <!-- tail -->
+          <ellipse cx="79" cy="88" rx="6" ry="8" fill="#F0D9BD" transform="rotate(20 79 88)"/>
+          <!-- ears -->
+          <ellipse cx="33" cy="52" rx="8" ry="13" fill="#C4956A" transform="rotate(-18 33 52)"/>
+          <ellipse cx="77" cy="52" rx="8" ry="13" fill="#C4956A" transform="rotate(18 77 52)"/>
+          <ellipse cx="33.5" cy="52" rx="4.5" ry="8" fill="#E8A0A0" transform="rotate(-18 33 52)"/>
+          <ellipse cx="76.5" cy="52" rx="4.5" ry="8" fill="#E8A0A0" transform="rotate(18 77 52)"/>
+          <!-- head -->
+          <ellipse cx="55" cy="50" rx="22" ry="21" fill="#C4956A"/>
+          <ellipse cx="55" cy="52" rx="14" ry="15" fill="#E8C99A"/>
+          <!-- eyes -->
+          <ellipse cx="47" cy="47" rx="3.2" ry="3.5" fill="#5C3D2E"/>
+          <ellipse cx="63" cy="47" rx="3.2" ry="3.5" fill="#5C3D2E"/>
+          <circle cx="47.9" cy="46.1" r="1" fill="white"/>
+          <circle cx="63.9" cy="46.1" r="1" fill="white"/>
+          <!-- nose -->
+          <ellipse cx="55" cy="57" rx="4.5" ry="3" fill="#B98587"/>
+          <!-- mouth -->
+          <path d="M51 61 Q55 65 59 61" stroke="#987665" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <!-- blush -->
+          <ellipse cx="43" cy="54" rx="4" ry="2.5" fill="#E8A0A0" opacity="0.5"/>
+          <ellipse cx="67" cy="54" rx="4" ry="2.5" fill="#E8A0A0" opacity="0.5"/>
+          <!-- antlers -->
+          <line x1="40" y1="33" x2="27" y2="14" stroke="#987665" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="27" y1="14" x2="19" y2="6"  stroke="#987665" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="27" y1="14" x2="30" y2="5"  stroke="#987665" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="27" y1="14" x2="21" y2="20" stroke="#987665" stroke-width="2" stroke-linecap="round"/>
+          <line x1="70" y1="33" x2="83" y2="14" stroke="#987665" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="83" y1="14" x2="91" y2="6"  stroke="#987665" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="83" y1="14" x2="80" y2="5"  stroke="#987665" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="83" y1="14" x2="89" y2="20" stroke="#987665" stroke-width="2" stroke-linecap="round"/>
+          <!-- legs -->
+          <rect x="40" y="116" width="9"  height="14" rx="4.5" fill="#C4956A"/>
+          <rect x="61" y="116" width="9"  height="14" rx="4.5" fill="#C4956A"/>
+          <rect x="43" y="118" width="6"  height="10" rx="3"   fill="#B07D50"/>
+          <rect x="64" y="118" width="6"  height="10" rx="3"   fill="#B07D50"/>
+          <!-- scarf -->
+          <path d="M33 72 Q55 80 77 72" stroke="#B98587" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <path d="M33 72 Q55 78 77 72" stroke="#D4A5A0" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <!-- tiny flower -->
+          <circle cx="77" cy="72" r="3" fill="#E8D5D0"/>
+          <circle cx="77" cy="72" r="1.5" fill="#B98587"/>
+        </svg>
+      </div>
+
+      <!-- Subject overview cards -->
+      <h3 class="subsection-title">Current Subjects</h3>
+      <div class="cards-grid">
+        <div class="subject-card" style="--accent:#B98587">
+          <div class="subject-icon">🧠</div>
+          <div class="subject-info">
+            <h4>Cognitive Psychology</h4>
+            <span class="subject-code">PSY 301</span>
+          </div>
+          <div class="subject-progress">
+            <div class="progress-bar"><div class="progress-fill" style="width:72%"></div></div>
+            <span class="progress-label">72%</span>
+          </div>
+        </div>
+        <div class="subject-card" style="--accent:#536B52">
+          <div class="subject-icon">📊</div>
+          <div class="subject-info">
+            <h4>Research Methods</h4>
+            <span class="subject-code">PSY 310</span>
+          </div>
+          <div class="subject-progress">
+            <div class="progress-bar"><div class="progress-fill" style="width:55%"></div></div>
+            <span class="progress-label">55%</span>
+          </div>
+        </div>
+        <div class="subject-card" style="--accent:#987665">
+          <div class="subject-icon">🌙</div>
+          <div class="subject-info">
+            <h4>Abnormal Psychology</h4>
+            <span class="subject-code">PSY 320</span>
+          </div>
+          <div class="subject-progress">
+            <div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div>
+            <span class="progress-label">40%</span>
+          </div>
+        </div>
+        <div class="subject-card" style="--accent:#8B7BA8">
+          <div class="subject-icon">🌿</div>
+          <div class="subject-info">
+            <h4>Developmental Psych</h4>
+            <span class="subject-code">PSY 315</span>
+          </div>
+          <div class="subject-progress">
+            <div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>
+            <span class="progress-label">88%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upcoming & Stats row -->
+      <div class="two-col-grid">
+        <!-- Upcoming deadlines -->
+        <div class="card">
+          <h3 class="card-title">🍂 Upcoming Deadlines</h3>
+          <ul class="deadline-list">
+            <li class="deadline-item deadline-urgent">
+              <div class="deadline-dot"></div>
+              <div class="deadline-body">
+                <span class="deadline-name">Research Methods — Literature Review</span>
+                <span class="deadline-date">Due: 20 Nov 2026</span>
+              </div>
+              <span class="deadline-badge urgent">2 days</span>
+            </li>
+            <li class="deadline-item deadline-soon">
+              <div class="deadline-dot"></div>
+              <div class="deadline-body">
+                <span class="deadline-name">Cognitive Psych — Chapter 7 Quiz</span>
+                <span class="deadline-date">Due: 22 Nov 2026</span>
+              </div>
+              <span class="deadline-badge soon">4 days</span>
+            </li>
+            <li class="deadline-item">
+              <div class="deadline-dot"></div>
+              <div class="deadline-body">
+                <span class="deadline-name">Abnormal Psych — Case Study Draft</span>
+                <span class="deadline-date">Due: 28 Nov 2026</span>
+              </div>
+              <span class="deadline-badge">10 days</span>
+            </li>
+            <li class="deadline-item">
+              <div class="deadline-dot"></div>
+              <div class="deadline-body">
+                <span class="deadline-name">Developmental Psych — Final Exam</span>
+                <span class="deadline-date">Due: 05 Dec 2026</span>
+              </div>
+              <span class="deadline-badge">17 days</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Quick stats -->
+        <div class="card">
+          <h3 class="card-title">🌱 This Week's Activity</h3>
+          <div class="stats-grid">
+            <div class="stat-block">
+              <span class="stat-num">12.5h</span>
+              <span class="stat-label">Study Time</span>
+            </div>
+            <div class="stat-block">
+              <span class="stat-num">34</span>
+              <span class="stat-label">Flashcards</span>
+            </div>
+            <div class="stat-block">
+              <span class="stat-num">3</span>
+              <span class="stat-label">Quizzes Done</span>
+            </div>
+            <div class="stat-block">
+              <span class="stat-num">87%</span>
+              <span class="stat-label">Avg. Score</span>
+            </div>
+          </div>
+          <div class="study-streak">
+            <span class="streak-label">🔥 Study Streak</span>
+            <div class="streak-days">
+              <span class="day done">M</span>
+              <span class="day done">T</span>
+              <span class="day done">W</span>
+              <span class="day today">T</span>
+              <span class="day">F</span>
+              <span class="day">S</span>
+              <span class="day">S</span>
+            </div>
+            <span class="streak-count">3 days in a row!</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. LEARNING MATERIALS ============ -->
+    <section id="materials" class="section">
+      <div class="section-header">
+        <h1 class="section-title">Learning Materials</h1>
+      </div>
+
+      <!-- Upload area -->
+      <div class="upload-area">
+        <div class="upload-icon">📎</div>
+        <p class="upload-title">Drop your files here</p>
+        <p class="upload-sub">Supports PDF, DOCX, PPTX, TXT — max 50 MB per file</p>
+        <label class="btn btn-outline upload-btn">Choose Files</label>
+      </div>
+
+      <!-- Subject tabs (CSS-only) -->
+      <div class="tab-group">
+        <input type="radio" name="mat-tab" id="tab-cog"  checked /><label for="tab-cog">Cognitive Psych</label>
+        <input type="radio" name="mat-tab" id="tab-res"         /><label for="tab-res">Research Methods</label>
+        <input type="radio" name="mat-tab" id="tab-abn"         /><label for="tab-abn">Abnormal Psych</label>
+        <input type="radio" name="mat-tab" id="tab-dev"         /><label for="tab-dev">Developmental</label>
+      </div>
+
+      <!-- Materials list -->
+      <div class="materials-list">
+        <div class="material-card">
+          <div class="material-type pdf">PDF</div>
+          <div class="material-info">
+            <h4>Chapter 6 — Memory Systems</h4>
+            <span class="material-meta">PSY 301 · 24 pages · Uploaded 10 Nov</span>
+            <p class="material-summary">Covers episodic, semantic, and procedural memory, encoding strategies, retrieval cues, and the role of the hippocampus in long-term memory formation.</p>
+          </div>
+          <div class="material-tags">
+            <span class="tag">Memory</span>
+            <span class="tag">Hippocampus</span>
+            <span class="tag">Encoding</span>
+          </div>
+          <div class="material-actions">
+            <a href="#" class="btn btn-sm btn-outline">📖 Open</a>
+            <a href="#" class="btn btn-sm btn-primary">✨ Summarise</a>
+          </div>
+        </div>
+
+        <div class="material-card">
+          <div class="material-type ppt">PPT</div>
+          <div class="material-info">
+            <h4>Chapter 7 — Attention &amp; Perception</h4>
+            <span class="material-meta">PSY 301 · 36 slides · Uploaded 14 Nov</span>
+            <p class="material-summary">Lecture slides on selective attention, divided attention, bottom-up vs. top-down processing, and perceptual load theory.</p>
+          </div>
+          <div class="material-tags">
+            <span class="tag">Attention</span>
+            <span class="tag">Perception</span>
+            <span class="tag">Lecture Slides</span>
+          </div>
+          <div class="material-actions">
+            <a href="#" class="btn btn-sm btn-outline">📖 Open</a>
+            <a href="#" class="btn btn-sm btn-primary">✨ Summarise</a>
+          </div>
+        </div>
+
+        <div class="material-card">
+          <div class="material-type doc">DOC</div>
+          <div class="material-info">
+            <h4>Research Methods — Literature Review Guide</h4>
+            <span class="material-meta">PSY 310 · 12 pages · Uploaded 15 Nov</span>
+            <p class="material-summary">Step-by-step guide to writing a psychology literature review: APA formatting, source evaluation, synthesis strategies, and common pitfalls.</p>
+          </div>
+          <div class="material-tags">
+            <span class="tag">APA</span>
+            <span class="tag">Literature Review</span>
+            <span class="tag">Writing</span>
+          </div>
+          <div class="material-actions">
+            <a href="#" class="btn btn-sm btn-outline">📖 Open</a>
+            <a href="#" class="btn btn-sm btn-primary">✨ Summarise</a>
+          </div>
+        </div>
+
+        <div class="material-card">
+          <div class="material-type pdf">PDF</div>
+          <div class="material-info">
+            <h4>DSM-5 Overview — Mood Disorders</h4>
+            <span class="material-meta">PSY 320 · 18 pages · Uploaded 16 Nov</span>
+            <p class="material-summary">Diagnostic criteria for major depressive disorder, bipolar I &amp; II, persistent depressive disorder, and cyclothymia with case vignettes.</p>
+          </div>
+          <div class="material-tags">
+            <span class="tag">DSM-5</span>
+            <span class="tag">Mood Disorders</span>
+            <span class="tag">Diagnosis</span>
+          </div>
+          <div class="material-actions">
+            <a href="#" class="btn btn-sm btn-outline">📖 Open</a>
+            <a href="#" class="btn btn-sm btn-primary">✨ Summarise</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. AI STUDY WORKFLOW ============ -->
+    <section id="workflow" class="section">
+      <div class="section-header">
+        <h1 class="section-title">AI Study Workflow</h1>
+        <span class="section-badge ai-badge">✨ AI Generated</span>
+      </div>
+
+      <div class="workflow-banner">
+        <span class="workflow-banner-icon">🌿</span>
+        <p>Your AI study companion analysed <strong>Chapter 7 — Attention &amp; Perception</strong> and created a personalised learning plan below.</p>
+      </div>
+
+      <div class="workflow-grid">
+        <!-- Step cards -->
+        <div class="workflow-step done">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Read Core Material</h4>
+            <p>Review lecture slides and textbook pp. 182–210 on attention models.</p>
+            <div class="step-meta"><span class="step-time">⏱ 45 min</span><span class="step-tag">Reading</span></div>
+            <label class="checkbox-label"><input type="checkbox" checked /> Mark complete</label>
+          </div>
+        </div>
+
+        <div class="workflow-step done">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Summarise Key Concepts</h4>
+            <p>Write a one-page summary covering selective attention, perceptual load, and Treisman's Feature Integration Theory.</p>
+            <div class="step-meta"><span class="step-time">⏱ 30 min</span><span class="step-tag">Writing</span></div>
+            <label class="checkbox-label"><input type="checkbox" checked /> Mark complete</label>
+          </div>
+        </div>
+
+        <div class="workflow-step active">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>Create Concept Map</h4>
+            <p>Draw a visual map linking attention theories, neural correlates, and real-world examples.</p>
+            <div class="step-meta"><span class="step-time">⏱ 40 min</span><span class="step-tag">Visual Learning</span></div>
+            <label class="checkbox-label"><input type="checkbox" /> Mark complete</label>
+          </div>
+        </div>
+
+        <div class="workflow-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>Practice Quiz</h4>
+            <p>Complete the Chapter 7 practice quiz (15 questions, mixed difficulty).</p>
+            <div class="step-meta"><span class="step-time">⏱ 25 min</span><span class="step-tag">Assessment</span></div>
+            <label class="checkbox-label"><input type="checkbox" /> Mark complete</label>
+          </div>
+        </div>
+
+        <div class="workflow-step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h4>Review Weak Areas</h4>
+            <p>Revisit any incorrect quiz answers. Focus on divided attention and dual-task interference.</p>
+            <div class="step-meta"><span class="step-time">⏱ 30 min</span><span class="step-tag">Review</span></div>
+            <label class="checkbox-label"><input type="checkbox" /> Mark complete</label>
+          </div>
+        </div>
+
+        <div class="workflow-step">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <h4>Apply to Case Study</h4>
+            <p>Connect attention theories to the provided ADHD case study for deeper understanding.</p>
+            <div class="step-meta"><span class="step-time">⏱ 50 min</span><span class="step-tag">Application</span></div>
+            <label class="checkbox-label"><input type="checkbox" /> Mark complete</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learning objectives -->
+      <h3 class="subsection-title">Learning Objectives</h3>
+      <ul class="objectives-list">
+        <li><span class="obj-icon">🎯</span> Define and distinguish types of attention (selective, divided, sustained)</li>
+        <li><span class="obj-icon">🎯</span> Explain Treisman's Feature Integration Theory and its limitations</li>
+        <li><span class="obj-icon">🎯</span> Describe the neural correlates of attentional control in the prefrontal cortex</li>
+        <li><span class="obj-icon">🎯</span> Apply attention models to real-world examples and clinical contexts</li>
+        <li><span class="obj-icon">🎯</span> Critically evaluate research methodology used in attention studies</li>
+      </ul>
+    </section>
+
+    <!-- ============ 4. QUIZ & PRACTICE ============ -->
+    <section id="quiz" class="section">
+      <div class="section-header">
+        <h1 class="section-title">Quiz &amp; Practice</h1>
+      </div>
+
+      <!-- Quiz categories -->
+      <div class="cards-grid">
+        <div class="quiz-category-card">
+          <div class="qc-icon">🧠</div>
+          <h4>Cognitive Psychology</h4>
+          <span class="qc-count">48 questions</span>
+          <div class="qc-levels">
+            <span class="level easy">Easy</span>
+            <span class="level med">Medium</span>
+            <span class="level hard">Hard</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Start Quiz</a>
+        </div>
+        <div class="quiz-category-card">
+          <div class="qc-icon">📊</div>
+          <h4>Research Methods</h4>
+          <span class="qc-count">35 questions</span>
+          <div class="qc-levels">
+            <span class="level easy">Easy</span>
+            <span class="level med">Medium</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Start Quiz</a>
+        </div>
+        <div class="quiz-category-card">
+          <div class="qc-icon">🌙</div>
+          <h4>Abnormal Psychology</h4>
+          <span class="qc-count">52 questions</span>
+          <div class="qc-levels">
+            <span class="level easy">Easy</span>
+            <span class="level med">Medium</span>
+            <span class="level hard">Hard</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Start Quiz</a>
+        </div>
+      </div>
+
+      <!-- Sample questions -->
+      <h3 class="subsection-title">Sample Questions — Cognitive Psychology</h3>
+      <div class="quiz-container">
+
+        <div class="quiz-question">
+          <div class="q-num">Q1</div>
+          <div class="q-body">
+            <p class="q-text">Which memory system is responsible for storing factual knowledge about the world, independent of personal experience?</p>
+            <ul class="q-options">
+              <li><label><input type="radio" name="q1" /> Episodic memory</label></li>
+              <li><label><input type="radio" name="q1" /> Procedural memory</label></li>
+              <li class="correct-answer"><label><input type="radio" name="q1" checked /> Semantic memory</label></li>
+              <li><label><input type="radio" name="q1" /> Working memory</label></li>
+            </ul>
+            <div class="q-feedback correct">✅ Correct! Semantic memory stores general world knowledge without episodic context.</div>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <div class="q-num">Q2</div>
+          <div class="q-body">
+            <p class="q-text">According to Baddeley's model, which component of working memory is responsible for integrating information from other subsystems?</p>
+            <ul class="q-options">
+              <li><label><input type="radio" name="q2" /> Phonological loop</label></li>
+              <li><label><input type="radio" name="q2" /> Visuospatial sketchpad</label></li>
+              <li><label><input type="radio" name="q2" /> Episodic buffer</label></li>
+              <li><label><input type="radio" name="q2" /> Central executive</label></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <div class="q-num">Q3</div>
+          <div class="q-body">
+            <p class="q-text">The phenomenon where people remember items at the beginning of a list better than middle items is known as:</p>
+            <ul class="q-options">
+              <li><label><input type="radio" name="q3" /> Recency effect</label></li>
+              <li class="correct-answer"><label><input type="radio" name="q3" /> Primacy effect</label></li>
+              <li><label><input type="radio" name="q3" /> Encoding specificity</label></li>
+              <li><label><input type="radio" name="q3" /> Context-dependent memory</label></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quiz summary -->
+      <h3 class="subsection-title">Recent Quiz Results</h3>
+      <div class="quiz-results">
+        <div class="result-card">
+          <div class="result-score" style="--score-color:#536B52">87%</div>
+          <div class="result-info">
+            <h4>Cognitive Psych — Memory Systems</h4>
+            <span>13/15 correct · 18 Nov 2026</span>
+            <span class="result-level">Medium difficulty</span>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-score" style="--score-color:#987665">73%</div>
+          <div class="result-info">
+            <h4>Research Methods — Sampling Techniques</h4>
+            <span>11/15 correct · 15 Nov 2026</span>
+            <span class="result-level">Hard difficulty</span>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-score" style="--score-color:#B98587">93%</div>
+          <div class="result-info">
+            <h4>Developmental Psych — Piaget's Stages</h4>
+            <span>14/15 correct · 12 Nov 2026</span>
+            <span class="result-level">Easy difficulty</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. STUDY PLANNER ============ -->
+    <section id="planner" class="section">
+      <div class="section-header">
+        <h1 class="section-title">Study Planner</h1>
+      </div>
+
+      <!-- ── ADD PLAN BUTTON + FORM (CSS-only toggle via hidden checkbox) ── -->
+      <input type="checkbox" class="planner-add-toggle" id="planner-toggle" />
+      <label class="planner-add-btn" for="planner-toggle">
+        <span class="add-label">＋ Add Study Plan</span>
+        <span class="close-label">✕ Close Form</span>
+      </label>
+
+      <!-- Add Plan Form Panel -->
+      <div class="planner-form-panel">
+        <p class="form-title">🗓️ Create a New Study Plan</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="plan-title">Study Title *</label>
+            <input class="form-input" id="plan-title" type="text" placeholder="e.g. Chapter 8 Reading" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="plan-subject">Subject *</label>
+            <select class="form-select" id="plan-subject">
+              <option value="">— Select subject —</option>
+              <option value="cog">🧠 Cognitive Psychology (PSY 301)</option>
+              <option value="res">📊 Research Methods (PSY 310)</option>
+              <option value="abn">🌙 Abnormal Psychology (PSY 320)</option>
+              <option value="dev">🌿 Developmental Psychology (PSY 315)</option>
+              <option value="soc">🌾 Social Psychology (PSY 330)</option>
+              <option value="other">📖 Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row triple">
+          <div class="form-group">
+            <label class="form-label" for="plan-date">Date *</label>
+            <input class="form-input" id="plan-date" type="date" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="plan-start">Start Time</label>
+            <input class="form-input" id="plan-start" type="time" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="plan-end">End Time</label>
+            <input class="form-input" id="plan-end" type="time" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="plan-status">Status</label>
+            <select class="form-select" id="plan-status">
+              <option value="pending">🌱 Pending</option>
+              <option value="inprogress">🔆 In Progress</option>
+              <option value="done">✅ Completed</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="plan-type">Session Type</label>
+            <select class="form-select" id="plan-type">
+              <option>📖 Reading</option>
+              <option>✍️ Writing / Assignment</option>
+              <option>🗺️ Concept Mapping</option>
+              <option>🍄 Quiz / Practice</option>
+              <option>🔄 Revision</option>
+              <option>🎯 Exam Prep</option>
+              <option>📝 Note-taking</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row single">
+          <div class="form-group">
+            <label class="form-label" for="plan-notes">Notes (optional)</label>
+            <textarea class="form-textarea" id="plan-notes" placeholder="Add any notes, goals, or reminders for this study session…"></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary">🌿 Save Plan</button>
+          <label class="btn btn-outline" for="planner-toggle">✕ Cancel</label>
+        </div>
+      </div>
+
+      <!-- ── MY STUDY PLANS ── -->
+      <h3 class="subsection-title">My Study Plans</h3>
+
+      <!-- Plan card 1 — with edit panel -->
+      <div class="plan-cards-list">
+
+        <input type="checkbox" class="plan-done-toggle" id="done1" />
+        <input type="checkbox" class="plan-edit-toggle" id="edit1" />
+        <div class="plan-card subject-cog">
+          <div class="plan-card-header">
+            <label class="plan-card-check" for="done1"><input type="checkbox" /></label>
+            <div class="plan-card-info">
+              <p class="plan-card-title">🧠 Cognitive Psychology — Attention &amp; Perception ch.7</p>
+              <div class="plan-card-meta">
+                <span class="plan-meta-item">📅 Wed 18 Nov 2026</span>
+                <span class="plan-meta-item">⏰ 14:00 – 15:30</span>
+                <span class="plan-meta-item">📖 Reading &amp; Notes</span>
+              </div>
+              <span class="plan-status status-inprogress">🔆 In Progress</span>
+              <p class="plan-card-notes">Focus on selective attention and Treisman's theory. Prepare concept map outline.</p>
+            </div>
+          </div>
+          <div class="plan-card-actions">
+            <label class="btn btn-sm btn-outline" for="edit1">✏️ Edit</label>
+            <a href="#" class="btn btn-sm btn-danger">🗑 Delete</a>
+          </div>
+          <!-- Inline edit panel -->
+          <div class="plan-edit-panel">
+            <p class="form-title" style="font-size:0.95rem;margin-bottom:14px;">✏️ Edit Study Plan</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Study Title</label>
+                <input class="form-input" type="text" value="Cognitive Psychology — Attention &amp; Perception ch.7" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Subject</label>
+                <select class="form-select"><option selected>🧠 Cognitive Psychology (PSY 301)</option></select>
+              </div>
+            </div>
+            <div class="form-row triple">
+              <div class="form-group">
+                <label class="form-label">Date</label>
+                <input class="form-input" type="date" value="2026-11-18" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Start</label>
+                <input class="form-input" type="time" value="14:00" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">End</label>
+                <input class="form-input" type="time" value="15:30" />
+              </div>
+            </div>
+            <div class="form-row single">
+              <div class="form-group">
+                <label class="form-label">Notes</label>
+                <textarea class="form-textarea">Focus on selective attention and Treisman's theory. Prepare concept map outline.</textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-green btn-sm">💾 Save Changes</button>
+              <label class="btn btn-outline btn-sm" for="edit1">✕ Cancel</label>
+            </div>
+          </div>
+        </div>
+
+        <input type="checkbox" class="plan-done-toggle" id="done2" />
+        <input type="checkbox" class="plan-edit-toggle" id="edit2" />
+        <div class="plan-card subject-res">
+          <div class="plan-card-header">
+            <label class="plan-card-check" for="done2"><input type="checkbox" /></label>
+            <div class="plan-card-info">
+              <p class="plan-card-title">📊 Research Methods — Literature Review Draft</p>
+              <div class="plan-card-meta">
+                <span class="plan-meta-item">📅 Wed 18 Nov 2026</span>
+                <span class="plan-meta-item">⏰ 19:00 – 21:00</span>
+                <span class="plan-meta-item">✍️ Writing</span>
+              </div>
+              <span class="plan-status status-inprogress">🔆 In Progress</span>
+              <p class="plan-card-notes">Complete introduction &amp; methodology sections. Due Fri 20 Nov — submit by 23:59.</p>
+            </div>
+          </div>
+          <div class="plan-card-actions">
+            <label class="btn btn-sm btn-outline" for="edit2">✏️ Edit</label>
+            <a href="#" class="btn btn-sm btn-danger">🗑 Delete</a>
+          </div>
+          <div class="plan-edit-panel">
+            <p class="form-title" style="font-size:0.95rem;margin-bottom:14px;">✏️ Edit Study Plan</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Study Title</label>
+                <input class="form-input" type="text" value="Research Methods — Literature Review Draft" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Subject</label>
+                <select class="form-select"><option selected>📊 Research Methods (PSY 310)</option></select>
+              </div>
+            </div>
+            <div class="form-row triple">
+              <div class="form-group">
+                <label class="form-label">Date</label>
+                <input class="form-input" type="date" value="2026-11-18" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Start</label>
+                <input class="form-input" type="time" value="19:00" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">End</label>
+                <input class="form-input" type="time" value="21:00" />
+              </div>
+            </div>
+            <div class="form-row single">
+              <div class="form-group">
+                <label class="form-label">Notes</label>
+                <textarea class="form-textarea">Complete introduction &amp; methodology sections. Due Fri 20 Nov — submit by 23:59.</textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-green btn-sm">💾 Save Changes</button>
+              <label class="btn btn-outline btn-sm" for="edit2">✕ Cancel</label>
+            </div>
+          </div>
+        </div>
+
+        <input type="checkbox" class="plan-done-toggle" id="done3" />
+        <input type="checkbox" class="plan-edit-toggle" id="edit3" />
+        <div class="plan-card subject-dev">
+          <div class="plan-card-header">
+            <label class="plan-card-check" for="done3"><input type="checkbox" /></label>
+            <div class="plan-card-info">
+              <p class="plan-card-title">🌿 Developmental Psychology — Chapter 9 Reading</p>
+              <div class="plan-card-meta">
+                <span class="plan-meta-item">📅 Thu 19 Nov 2026</span>
+                <span class="plan-meta-item">⏰ 10:00 – 11:30</span>
+                <span class="plan-meta-item">📖 Reading</span>
+              </div>
+              <span class="plan-status status-pending">🌱 Pending</span>
+              <p class="plan-card-notes">Read Vygotsky's zone of proximal development. Take margin notes and highlight key terms.</p>
+            </div>
+          </div>
+          <div class="plan-card-actions">
+            <label class="btn btn-sm btn-outline" for="edit3">✏️ Edit</label>
+            <a href="#" class="btn btn-sm btn-danger">🗑 Delete</a>
+          </div>
+          <div class="plan-edit-panel">
+            <p class="form-title" style="font-size:0.95rem;margin-bottom:14px;">✏️ Edit Study Plan</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Study Title</label>
+                <input class="form-input" type="text" value="Developmental Psychology — Chapter 9 Reading" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Subject</label>
+                <select class="form-select"><option selected>🌿 Developmental Psychology (PSY 315)</option></select>
+              </div>
+            </div>
+            <div class="form-row triple">
+              <div class="form-group">
+                <label class="form-label">Date</label>
+                <input class="form-input" type="date" value="2026-11-19" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Start</label>
+                <input class="form-input" type="time" value="10:00" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">End</label>
+                <input class="form-input" type="time" value="11:30" />
+              </div>
+            </div>
+            <div class="form-row single">
+              <div class="form-group">
+                <label class="form-label">Notes</label>
+                <textarea class="form-textarea">Read Vygotsky's zone of proximal development. Take margin notes and highlight key terms.</textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-green btn-sm">💾 Save Changes</button>
+              <label class="btn btn-outline btn-sm" for="edit3">✕ Cancel</label>
+            </div>
+          </div>
+        </div>
+
+        <input type="checkbox" class="plan-done-toggle" id="done4" checked />
+        <input type="checkbox" class="plan-edit-toggle" id="edit4" />
+        <div class="plan-card subject-cog">
+          <div class="plan-card-header">
+            <label class="plan-card-check" for="done4"><input type="checkbox" checked /></label>
+            <div class="plan-card-info">
+              <p class="plan-card-title">🧠 Cognitive Psychology — Chapter 6 Notes</p>
+              <div class="plan-card-meta">
+                <span class="plan-meta-item">📅 Mon 10 Nov 2026</span>
+                <span class="plan-meta-item">⏰ 13:00 – 14:30</span>
+                <span class="plan-meta-item">📝 Note-taking</span>
+              </div>
+              <span class="plan-status status-done">✅ Completed</span>
+            </div>
+          </div>
+          <div class="plan-card-actions">
+            <label class="btn btn-sm btn-outline" for="edit4">✏️ Edit</label>
+            <a href="#" class="btn btn-sm btn-danger">🗑 Delete</a>
+          </div>
+          <div class="plan-edit-panel">
+            <p class="form-title" style="font-size:0.95rem;margin-bottom:14px;">✏️ Edit Study Plan</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Study Title</label>
+                <input class="form-input" type="text" value="Cognitive Psychology — Chapter 6 Notes" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Subject</label>
+                <select class="form-select"><option selected>🧠 Cognitive Psychology (PSY 301)</option></select>
+              </div>
+            </div>
+            <div class="form-row triple">
+              <div class="form-group">
+                <label class="form-label">Date</label>
+                <input class="form-input" type="date" value="2026-11-10" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Start</label>
+                <input class="form-input" type="time" value="13:00" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">End</label>
+                <input class="form-input" type="time" value="14:30" />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-green btn-sm">💾 Save Changes</button>
+              <label class="btn btn-outline btn-sm" for="edit4">✕ Cancel</label>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end .plan-cards-list -->
+
+      <!-- ── WEEKLY SCHEDULE VIEW ── -->
+      <h3 class="subsection-title">Weekly Schedule — 18–24 November 2026</h3>
+      <div class="schedule-grid">
+        <div class="schedule-day today-col">
+          <div class="day-header today-header">Wed 18</div>
+          <div class="schedule-block block-cog">🧠 Cognitive — Attention ch.7<br><small>14:00–15:30</small></div>
+          <div class="schedule-block block-res">📊 Lit Review Draft<br><small>19:00–21:00</small></div>
+        </div>
+        <div class="schedule-day">
+          <div class="day-header">Thu 19</div>
+          <div class="schedule-block block-dev">🌿 Developmental Reading<br><small>10:00–11:30</small></div>
+          <div class="schedule-block block-cog">🧠 Concept Map Work<br><small>15:00–16:00</small></div>
+        </div>
+        <div class="schedule-day">
+          <div class="day-header">Fri 20</div>
+          <div class="schedule-block block-res">📊 Submit Lit Review<br><small>⚠️ Deadline</small></div>
+          <div class="schedule-block block-abn">🌙 DSM-5 Review<br><small>13:00–14:30</small></div>
+        </div>
+        <div class="schedule-day">
+          <div class="day-header">Sat 21</div>
+          <div class="schedule-block block-cog">🧠 Ch.7 Quiz Practice<br><small>11:00–12:00</small></div>
+        </div>
+        <div class="schedule-day">
+          <div class="day-header">Sun 22</div>
+          <div class="schedule-block block-cog">🧠 Ch.7 Quiz (Deadline)<br><small>⚠️ Due today</small></div>
+          <div class="schedule-block block-dev">🌿 Developmental Revision<br><small>16:00–18:00</small></div>
+        </div>
+      </div>
+
+      <!-- ── ASSIGNMENT TRACKER ── -->
+      <h3 class="subsection-title">Assignment Tracker</h3>
+      <div class="task-list card">
+        <div class="task-item task-done">
+          <label class="task-check"><input type="checkbox" checked /><span>Cognitive Psych — Chapter 6 notes</span></label>
+          <span class="task-due">Due: 10 Nov ✓</span>
+        </div>
+        <div class="task-item task-done">
+          <label class="task-check"><input type="checkbox" checked /><span>Developmental Psych — Piaget Quiz</span></label>
+          <span class="task-due">Due: 12 Nov ✓</span>
+        </div>
+        <div class="task-item task-inprogress">
+          <label class="task-check"><input type="checkbox" /><span>Research Methods — Literature Review</span></label>
+          <span class="task-due urgent-text">Due: 20 Nov</span>
+        </div>
+        <div class="task-item">
+          <label class="task-check"><input type="checkbox" /><span>Cognitive Psych — Chapter 7 Quiz</span></label>
+          <span class="task-due">Due: 22 Nov</span>
+        </div>
+        <div class="task-item">
+          <label class="task-check"><input type="checkbox" /><span>Abnormal Psych — Case Study Draft</span></label>
+          <span class="task-due">Due: 28 Nov</span>
+        </div>
+        <div class="task-item">
+          <label class="task-check"><input type="checkbox" /><span>Developmental Psych — Final Exam Prep</span></label>
+          <span class="task-due">Due: 05 Dec</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. PROGRESS TRACKER ============ -->
+    <section id="progress" class="section">
+      <div class="section-header">
+        <h1 class="section-title">Progress Tracker</h1>
+      </div>
+
+      <!-- Subject progress -->
+      <h3 class="subsection-title">Subject Learning Progress</h3>
+      <div class="progress-cards">
+        <div class="progress-subject-card">
+          <div class="ps-header">
+            <span class="ps-icon">🧠</span>
+            <div>
+              <h4>Cognitive Psychology</h4>
+              <span class="ps-code">PSY 301</span>
+            </div>
+            <span class="ps-pct">72%</span>
+          </div>
+          <div class="progress-bar large"><div class="progress-fill" style="width:72%;background:#B98587"></div></div>
+          <div class="ps-stats">
+            <span>7 / 12 chapters covered</span>
+            <span>3 quizzes completed</span>
+            <span>Study time: 18h</span>
+          </div>
+        </div>
+
+        <div class="progress-subject-card">
+          <div class="ps-header">
+            <span class="ps-icon">📊</span>
+            <div>
+              <h4>Research Methods</h4>
+              <span class="ps-code">PSY 310</span>
+            </div>
+            <span class="ps-pct">55%</span>
+          </div>
+          <div class="progress-bar large"><div class="progress-fill" style="width:55%;background:#536B52"></div></div>
+          <div class="ps-stats">
+            <span>5 / 10 modules covered</span>
+            <span>2 quizzes completed</span>
+            <span>Study time: 12h</span>
+          </div>
+        </div>
+
+        <div class="progress-subject-card">
+          <div class="ps-header">
+            <span class="ps-icon">🌙</span>
+            <div>
+              <h4>Abnormal Psychology</h4>
+              <span class="ps-code">PSY 320</span>
+            </div>
+            <span class="ps-pct">40%</span>
+          </div>
+          <div class="progress-bar large"><div class="progress-fill" style="width:40%;background:#987665"></div></div>
+          <div class="ps-stats">
+            <span>4 / 10 chapters covered</span>
+            <span>1 quiz completed</span>
+            <span>Study time: 8h</span>
+          </div>
+        </div>
+
+        <div class="progress-subject-card">
+          <div class="ps-header">
+            <span class="ps-icon">🌿</span>
+            <div>
+              <h4>Developmental Psychology</h4>
+              <span class="ps-code">PSY 315</span>
+            </div>
+            <span class="ps-pct">88%</span>
+          </div>
+          <div class="progress-bar large"><div class="progress-fill" style="width:88%;background:#8B7BA8"></div></div>
+          <div class="ps-stats">
+            <span>9 / 10 chapters covered</span>
+            <span>4 quizzes completed</span>
+            <span>Study time: 22h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity stats -->
+      <h3 class="subsection-title">Monthly Activity</h3>
+      <div class="two-col-grid">
+        <div class="card">
+          <h4 class="card-title">📅 Study Hours per Week</h4>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">Week 1</span><div class="bar-track"><div class="bar-fill" style="width:60%">9h</div></div></div>
+            <div class="bar-row"><span class="bar-label">Week 2</span><div class="bar-track"><div class="bar-fill" style="width:80%">12h</div></div></div>
+            <div class="bar-row"><span class="bar-label">Week 3</span><div class="bar-track"><div class="bar-fill" style="width:50%">7.5h</div></div></div>
+            <div class="bar-row"><span class="bar-label">Week 4</span><div class="bar-track"><div class="bar-fill" style="width:85%">12.5h</div></div></div>
+          </div>
+        </div>
+        <div class="card">
+          <h4 class="card-title">🍄 Quiz Performance Trend</h4>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">Cognitive</span><div class="bar-track"><div class="bar-fill" style="width:87%;background:#B98587">87%</div></div></div>
+            <div class="bar-row"><span class="bar-label">Research</span><div class="bar-track"><div class="bar-fill" style="width:73%;background:#536B52">73%</div></div></div>
+            <div class="bar-row"><span class="bar-label">Abnormal</span><div class="bar-track"><div class="bar-fill" style="width:78%;background:#987665">78%</div></div></div>
+            <div class="bar-row"><span class="bar-label">Develop.</span><div class="bar-track"><div class="bar-fill" style="width:93%;background:#8B7BA8">93%</div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. ACADEMIC RECORDS ============ -->
+    <section id="records" class="section">
+      <div class="section-header">
+        <h1 class="section-title">Academic Records</h1>
+      </div>
+
+      <!-- GPA banner -->
+      <div class="gpa-banner">
+        <div class="gpa-block">
+          <span class="gpa-label">Cumulative GPA</span>
+          <span class="gpa-num">3.72</span>
+        </div>
+        <div class="gpa-block">
+          <span class="gpa-label">Semester GPA</span>
+          <span class="gpa-num">3.85</span>
+        </div>
+        <div class="gpa-block">
+          <span class="gpa-label">Credits Earned</span>
+          <span class="gpa-num">78 / 120</span>
+        </div>
+        <div class="gpa-block">
+          <span class="gpa-label">Academic Standing</span>
+          <span class="gpa-num gpa-standing">Dean's List</span>
+        </div>
+      </div>
+
+      <!-- Grade table -->
+      <h3 class="subsection-title">Current Semester — Fall 2026</h3>
+      <div class="table-wrapper">
+        <table class="grade-table">
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Subject</th>
+              <th>Credits</th>
+              <th>Midterm</th>
+              <th>Assignments</th>
+              <th>Final</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PSY 301</td>
+              <td>Cognitive Psychology</td>
+              <td>3</td>
+              <td>88</td>
+              <td>91</td>
+              <td>—</td>
+              <td><span class="grade-badge a">A</span></td>
+            </tr>
+            <tr>
+              <td>PSY 310</td>
+              <td>Research Methods</td>
+              <td>3</td>
+              <td>79</td>
+              <td>82</td>
+              <td>—</td>
+              <td><span class="grade-badge b">B+</span></td>
+            </tr>
+            <tr>
+              <td>PSY 320</td>
+              <td>Abnormal Psychology</td>
+              <td>3</td>
+              <td>84</td>
+              <td>78</td>
+              <td>—</td>
+              <td><span class="grade-badge b">B+</span></td>
+            </tr>
+            <tr>
+              <td>PSY 315</td>
+              <td>Developmental Psychology</td>
+              <td>3</td>
+              <td>95</td>
+              <td>97</td>
+              <td>—</td>
+              <td><span class="grade-badge a">A+</span></td>
+            </tr>
+            <tr>
+              <td>PSY 330</td>
+              <td>Social Psychology</td>
+              <td>3</td>
+              <td>81</td>
+              <td>85</td>
+              <td>—</td>
+              <td><span class="grade-badge b">B+</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Historical semesters -->
+      <h3 class="subsection-title">Previous Semesters</h3>
+      <div class="cards-grid">
+        <div class="semester-card">
+          <h4>Spring 2026</h4>
+          <span class="sem-gpa">GPA: 3.80</span>
+          <ul class="sem-grades">
+            <li>PSY 201 — Intro Cognitive &nbsp;<span class="grade-badge a">A</span></li>
+            <li>PSY 210 — Stats for Psych &nbsp;<span class="grade-badge a">A−</span></li>
+            <li>PSY 220 — Lifespan Dev. &nbsp;<span class="grade-badge b">B+</span></li>
+            <li>GEN 101 — Academic Writing &nbsp;<span class="grade-badge a">A</span></li>
+          </ul>
+        </div>
+        <div class="semester-card">
+          <h4>Fall 2025</h4>
+          <span class="sem-gpa">GPA: 3.65</span>
+          <ul class="sem-grades">
+            <li>PSY 101 — Intro to Psychology &nbsp;<span class="grade-badge a">A</span></li>
+            <li>PSY 110 — Biological Basis &nbsp;<span class="grade-badge b">B+</span></li>
+            <li>PSY 120 — Social Psych I &nbsp;<span class="grade-badge b">B</span></li>
+            <li>GEN 100 — University Skills &nbsp;<span class="grade-badge a">A</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Encouragement mascot -->
+      <div class="encouragement">
+        <svg class="enc-deer" viewBox="0 0 70 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <ellipse cx="35" cy="55" rx="17" ry="19" fill="#C4956A"/>
+          <ellipse cx="35" cy="55" rx="11" ry="13" fill="#E8C99A"/>
+          <ellipse cx="22" cy="34" rx="5" ry="8" fill="#C4956A" transform="rotate(-15 22 34)"/>
+          <ellipse cx="48" cy="34" rx="5" ry="8" fill="#C4956A" transform="rotate(15 48 34)"/>
+          <ellipse cx="22.5" cy="34" rx="2.8" ry="4.8" fill="#E8A0A0" transform="rotate(-15 22 34)"/>
+          <ellipse cx="47.5" cy="34" rx="2.8" ry="4.8" fill="#E8A0A0" transform="rotate(15 48 34)"/>
+          <ellipse cx="35" cy="32" rx="13" ry="13" fill="#C4956A"/>
+          <ellipse cx="35" cy="33" rx="8.5" ry="9" fill="#E8C99A"/>
+          <ellipse cx="30" cy="30" rx="2" ry="2.2" fill="#5C3D2E"/>
+          <ellipse cx="40" cy="30" rx="2" ry="2.2" fill="#5C3D2E"/>
+          <circle cx="30.6" cy="29.4" r="0.6" fill="white"/>
+          <circle cx="40.6" cy="29.4" r="0.6" fill="white"/>
+          <ellipse cx="35" cy="36" rx="2.8" ry="1.8" fill="#B98587"/>
+          <path d="M32 39 Q35 42 38 39" stroke="#987665" stroke-width="1" stroke-linecap="round" fill="none"/>
+          <line x1="25" y1="22" x2="17" y2="10" stroke="#987665" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="17" y1="10" x2="12" y2="5" stroke="#987665" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="17" y1="10" x2="20" y2="5" stroke="#987665" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="45" y1="22" x2="53" y2="10" stroke="#987665" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="53" y1="10" x2="58" y2="5" stroke="#987665" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="53" y1="10" x2="50" y2="5" stroke="#987665" stroke-width="1.8" stroke-linecap="round"/>
+          <rect x="27" y="71" width="6" height="9" rx="3" fill="#C4956A"/>
+          <rect x="37" y="71" width="6" height="9" rx="3" fill="#C4956A"/>
+        </svg>
+        <div class="enc-text">
+          <p class="enc-title">You're doing amazing, Elara! 🌿</p>
+          <p class="enc-sub">Dean's List standing and a 3.72 GPA — your dedication is truly paying off. Keep nurturing that curious mind.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
